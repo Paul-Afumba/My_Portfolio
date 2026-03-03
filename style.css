@@ -12,7 +12,10 @@
   list-style: none;
   text-decoration: none;
   font-family: "Plus Jakarta Sans", serif;
-  font-size: calc(0.2rem + 1.5vw);
+}
+
+html {
+  font-size: clamp(14px, 1.2vw, 18px);
 }
 
 :root{
@@ -55,6 +58,7 @@ body{
 .menu{
   display: flex;
   align-items: center;
+  z-index: 9998;
 }
 
 .menu li{
@@ -77,21 +81,32 @@ body{
  color: var(--primary-color);
 }
 
-.menu li a.active{
-  color: var(--primary-color);
-  font-weight: 1000;
-  
-}
-
 .menu-hamburger{
-  position: absolute;
-  top: 40px;
-  right: 50px;
   display: none;
-  width: 30px;
+  flex-direction: column;
   cursor: pointer;
+  z-index: 9999;
 }
 
+.menu-hamburger span{
+  width: 25px;
+  height: 3px;
+  background-color: var(--white);
+  margin: 4px 0;
+  transition: all 0.4s ease;
+}
+
+.menu-hamburger.active span:nth-child(1){
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-hamburger.active span:nth-child(2){
+  opacity: 0;
+}
+
+.menu-hamburger.active span:nth-child(3){
+  transform: rotate(-45deg) translate(6px, -6px);
+}
 /* MY HERO */
 
 .hero{
@@ -101,19 +116,90 @@ body{
   width: 100%;
   min-height: 100vh;
   position: relative;
-  padding: 0 5%;  
+  padding: 0 5%;
+  background: radial-gradient(circle at 15% 50%, rgba(0, 162, 255, 0.15)0%, transparent 40%), #080808;
+}
+
+.section_title{
+  width: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  color: var(--white);
+  z-index: 1;
+}
+
+.section_title .span{
+  color: var(--primary-color);
+  font-weight: 600;
+  font-size: 1.2rem;;
+  letter-spacing: 1px;
+}
+
+.section_title h2{
+  font-size: 3rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+
+section_title p{
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--white-light);
+  line-height: 30px;
 }
 
 .hero_text{
   width: 50%;
+  gap: 0;
 }
 
-
 .hero_text h1{
-  font-size: 1.5rem;
+  font-size: 3.0rem;
   letter-spacing: 1px;
-  color: white;
-  padding: 0 0 10px;
+  color: var(--white);
+  padding: 0px 0px 10px;
+}
+
+.hero_text h3{
+  font-size: 2.8rem;
+  margin: 0px 0px 20px;
+}
+
+.hero_text h1 .text{
+  color: var(--primary-color);
+}
+
+.hero_text p{
+  width: 70%;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.hero_btn {
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  gap: 30px;
+}
+
+.btn{
+  width: 150px;
+  height: 50px;
+  padding: 10px 20px;
+  background-color: transparent;
+  border-radius: 30px;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  text-align: center;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.btn:hover{
+  background-color: var(--primary-color);
+  color: var(--white);
+  transition: all 0.6s ease;
 }
 
 .hero_img{
@@ -127,57 +213,89 @@ body{
   height: auto;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
+
+  .section_title{
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+  }
   
   .menu-hamburger{
-    display: block;
+    display: flex;
   }
 
   .menu{
-    height: 0;
-    position: absolute;
+    height: 100vh;
+    position: fixed;
     flex-direction: column;
-    top: 100px;
-    left: 0%;
-    width: 100%;
-    background-color: rgba(135, 201, 240, 0.445);
+    top: 0;
+    right: -100%;
+    width: 70%;
+    background-color: rgba(129, 151, 184, 0.26);
     backdrop-filter: blur(3px);
-    opacity: 0;
-    overflow: hidden;
+    justify-content: center;
+    align-items: center;
     transition: all 0.6s ease;
   }
 
   .menu li{
-    width: 100%;
-    padding: 20px 12%;
+    padding: 20px 0;
   }
 
   .menu.active{
-    display: flex;
-    height: 200px;
-    opacity: 5;
+    right: 0;
   }
 
   .menu li a:hover{
     padding: 10px;
     font-size: 1rem;
   } 
-  
-  .hero{
-    text-align: center;
-  }
 
   .hero_text{
-    width: 100%;
+    width: 80%;
+  }
+
+  .hero_text h1{
+    font-size: 2.5rem;
+  }
+
+  .hero_text h3{
+    font-size: 2rem;
   }
 
   .hero_img{
     width: 100%;
     justify-content: center;
-    z-index: 9999;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .hero{
+    flex-direction: column;
+    padding: 0 20px;
+    background-position: right center;
   }
 
+  .hero_text h1{
+    font-size: 2rem;
+  }
+
+  .hero_text h3{
+    font-size: 1rem;
+  }
+
+  .span{
+    font: optional;
+  }
+
+  .hero_img{
+    width: 100%;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
 }
+
 
 
 
