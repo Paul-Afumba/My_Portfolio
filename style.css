@@ -55,6 +55,15 @@ body{
   color: var(--white)
 }
 
+.section{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 120px 12%;
+  gap: 50px;
+}
+
 .menu{
   display: flex;
   align-items: center;
@@ -110,14 +119,38 @@ body{
 /* MY HERO */
 
 .hero{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   width: 100%;
-  min-height: 100vh;
+  min-height: 88vh;
   position: relative;
-  padding: 0 5%;
-  background: radial-gradient(circle at 15% 50%, rgba(0, 162, 255, 0.15)0%, transparent 40%), #080808;
+  background-image: url(images/paul_afumba.png);
+  background-size:contain;
+  background-repeat: no-repeat;
+  background-position:right;
+  /* background: radial-gradient(circle at 15% 50%, rgba(0, 162, 255, 0.15)0%, transparent 40%), #080808; */
+}
+
+.hero::before{
+  content:"";
+  position: absolute;
+  top: -20%;
+  left: -30%;
+  height: 100%;
+  border-radius: 100%;
+  filter: blur(30px);
+  background: radial-gradient(circle, var(--primary-color) 0%, transparent 66%);
+  opacity: .3;
+  z-index: 0;
+}
+
+.hero::after{
+  content:"";
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  height: 100%;
+  border-radius: 100%;
+  background-color: #0f0f0f;
+  opacity: 0.2;
 }
 
 .section_title{
@@ -142,7 +175,7 @@ body{
   letter-spacing: 3px;
 }
 
-section_title p{
+.section_title p{
   font-size: 1.2rem;
   font-weight: 400;
   color: var(--white-light);
@@ -231,8 +264,8 @@ section_title p{
     top: 0;
     right: -100%;
     width: 70%;
-    background-color: rgba(129, 151, 184, 0.26);
-    backdrop-filter: blur(3px);
+    background-color: rgba(50, 77, 114, 0.37);
+    backdrop-filter: blur(10px);
     justify-content: center;
     align-items: center;
     transition: all 0.6s ease;
