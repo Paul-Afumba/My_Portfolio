@@ -1,243 +1,240 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <script src="index.js" defer></script>
     <title>Portfolio de Paul Afumba</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
-        
-        <nav class="navbar">
+      <nav class="navbar">
+        <a href="#hero" class="logo">Paul AFUMBA</a>
 
-            <a href="#hero" class="logo" >Paul AFUMBA</a> 
-            
-                <ul class="menu" id="menu-links">
-                    <li><a href="#about">À propos</a></li>
-                    <li><a href="#skills">Competences</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul> 
+        <ul class="menu" id="menu-links">
+          <li><a href="#about">À propos</a></li>
+          <li><a href="#skills">Competences</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
 
-            <div class="menu-hamburger" id="menu-hamburger"> 
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            
-        </nav>
-        
+        <div class="menu-hamburger" id="menu-hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+
+          <label>Menu</label>
+        </div>
+      </nav>
     </header>
 
     <section class="hero section">
-       <div class="hero_text section_title">
+      <div class="hero_text section_title">
         <span class="span">Bienvenu sur mon portfolio</span>
-            <h1>
-            Moi c'est Paul
-            <span class="text">AFUMBA</span>
-            </h1>
-            <h3>Développeur Web </h3>
-            <p>Je crée des sites web modernes, rapides et optimisés pour le SEO.</p>
+        <h1>
+          Moi c'est Paul
+          <span class="text">AFUMBA</span>
+        </h1>
+        <h3>Développeur Web</h3>
+        <p>Je crée des sites web modernes, rapides et optimisés pour le SEO.</p>
 
-            <div class="hero_btn">
-                    <a href="#contact" class="btn-hero">Me contacter</a>
-            </div>
+        <div class="hero_btn">
+          <a href="#contact" class="btn-hero">Me contacter</a>
         </div>
-            
+      </div>
     </section>
 
     <!-- ================= ABOUT ================= -->
-<section id="about" class="apropos">
-    <div class="container">
+    <section id="about" class="apropos">
+      <div class="container">
         <header class="section-header">
-            <h2>À propos de moi</h2>
+          <h2>À propos de moi</h2>
         </header>
 
         <p>
-            Développeur web passionné, spécialisé dans la conception d’interfaces modernes, performantes et centrées sur l’utilisateur.
-            <br>J’accompagne entreprises et entrepreneurs dans la création de solutions digitales efficaces,
-            en mettant l’accent sur la performance, l’accessibilité et l’expérience utilisateur.<br>
+          Développeur web passionné, spécialisé dans la conception d’interfaces
+          modernes, performantes et centrées sur l’utilisateur.
+          <br />J’accompagne entreprises et entrepreneurs dans la création de
+          solutions digitales efficaces, en mettant l’accent sur la performance,
+          l’accessibilité et l’expérience utilisateur.<br />
         </p>
-    </div>
-</section>
+      </div>
+    </section>
 
-
-<!-- ================= SKILLS ================= -->
-<section id="skills" class="skills">
-    <div class="container">
+    <!-- ================= SKILLS ================= -->
+    <section id="skills" class="skills">
+      <div class="container">
         <header class="section-header">
-            <h2>Compétences techniques</h2>
-            <p>Technologies et outils que j’utilise pour concevoir des applications web fiables et évolutives.</p>
+          <h2>Compétences techniques</h2>
+          <p>
+            Technologies et outils que j’utilise pour concevoir des applications
+            web fiables et évolutives.
+          </p>
         </header>
 
         <div class="skills-grid">
+          <article class="skills-category">
+            <h3>Front-End</h3>
+            <ul>
+              <li>HTML5 (structure sémantique)</li>
+              <li>CSS3 (Flexbox, Grid, animations)</li>
+              <li>JavaScript (ES6+)</li>
+            </ul>
+          </article>
 
-            <article class="skills-category">
-                <h3>Front-End</h3>
-                <ul>
-                    <li>HTML5 (structure sémantique)</li>
-                    <li>CSS3 (Flexbox, Grid, animations)</li>
-                    <li>JavaScript (ES6+)</li>
-                </ul>
-            </article>
+          <article class="skills-category">
+            <h3>Back-End</h3>
+            <ul>
+              <li>PHP</li>
+              <li>MySQL (gestion de bases de données)</li>
+            </ul>
+          </article>
 
-            <article class="skills-category">
-                <h3>Back-End</h3>
-                <ul>
-                    <li>PHP</li>
-                    <li>MySQL (gestion de bases de données)</li>
-                </ul>
-            </article>
-
-            <article class="skills-category">
-                <h3>Outils & Méthodologies</h3>
-                <ul>
-                    <li>Git & GitHub (versionning)</li>
-                    <li>Responsive Design (mobile-first)</li>
-                    <li>Bonnes pratiques SEO</li>
-                </ul>
-            </article>
-
+          <article class="skills-category">
+            <h3>Outils & Méthodologies</h3>
+            <ul>
+              <li>Git & GitHub (versionning)</li>
+              <li>Responsive Design (mobile-first)</li>
+              <li>Bonnes pratiques SEO</li>
+            </ul>
+          </article>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-
-<!-- ================= PROJECTS ================= -->
-<section id="projects">
-    <div class="container">
+    <!-- ================= PROJECTS ================= -->
+    <section id="projects">
+      <div class="container">
         <header class="section-header">
-            <h2>Mes projets</h2>
-            <p>Quelques réalisations illustrant mon savoir-faire technique et ma capacité à répondre à des besoins concrets.</p>
+          <h2>Mes projets</h2>
+          <p>
+            Quelques réalisations illustrant mon savoir-faire technique et ma
+            capacité à répondre à des besoins concrets.
+          </p>
         </header>
 
         <div class="projects-grid">
+          <article class="project-card">
+            <figure>
+              <img
+                src="project1.jpg"
+                alt="Capture d’écran du site vitrine d’un restaurant"
+              />
+            </figure>
 
-            <article class="project-card">
-                <figure>
-                    <img src="project1.jpg" alt="Capture d’écran du site vitrine d’un restaurant">
-                </figure>
+            <div class="project-content">
+              <h3>Site vitrine pour restaurant</h3>
 
-                <div class="project-content">
-                    <h3>Site vitrine pour restaurant</h3>
+              <p>
+                Développement d’un site web responsive pour un restaurant local,
+                avec optimisation des performances et amélioration du
+                référencement naturel.
+              </p>
 
-                    <p>
-                        Développement d’un site web responsive pour un restaurant local,
-                        avec optimisation des performances et amélioration du référencement naturel.
-                    </p>
+              <p><strong>Technologies :</strong> HTML, CSS, JavaScript</p>
 
-                    <p><strong>Technologies :</strong> HTML, CSS, JavaScript</p>
+              <div class="project-links">
+                <a href="#" target="_blank" rel="noopener">Voir le site</a>
+                <a href="#" target="_blank" rel="noopener">Voir le code</a>
+              </div>
+            </div>
+          </article>
 
-                    <div class="project-links">
-                        <a href="#" target="_blank" rel="noopener">Voir le site</a>
-                        <a href="#" target="_blank" rel="noopener">Voir le code</a>
-                    </div>
-                </div>
-            </article>
+          <article class="project-card">
+            <figure>
+              <img
+                src="project2.jpg"
+                alt="Capture d’écran d’une landing page SaaS"
+              />
+            </figure>
 
-            <article class="project-card">
-                <figure>
-                    <img src="project2.jpg" alt="Capture d’écran d’une landing page SaaS">
-                </figure>
+            <div class="project-content">
+              <h3>Landing page SaaS</h3>
 
-                <div class="project-content">
-                    <h3>Landing page SaaS</h3>
+              <p>
+                Conception d’une landing page optimisée pour la conversion, avec
+                une attention particulière portée à l’UX et à la hiérarchie
+                visuelle.
+              </p>
 
-                    <p>
-                        Conception d’une landing page optimisée pour la conversion,
-                        avec une attention particulière portée à l’UX et à la hiérarchie visuelle.
-                    </p>
+              <p><strong>Technologies :</strong> React, CSS</p>
 
-                    <p><strong>Technologies :</strong> React, CSS</p>
-
-                    <div class="project-links">
-                        <a href="#" target="_blank" rel="noopener">Voir le site</a>
-                        <a href="#" target="_blank" rel="noopener">Voir le code</a>
-                    </div>
-                </div>
-            </article>
-
+              <div class="project-links">
+                <a href="#" target="_blank" rel="noopener">Voir le site</a>
+                <a href="#" target="_blank" rel="noopener">Voir le code</a>
+              </div>
+            </div>
+          </article>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-
-<!-- ================= SERVICES ================= -->
-<section id="services">
-    <div class="container">
+    <!-- ================= SERVICES ================= -->
+    <section id="services">
+      <div class="container">
         <header class="section-header">
-            <h2>Services proposés</h2>
-            <p>Des solutions adaptées à vos besoins pour développer votre présence en ligne.</p>
+          <h2>Services proposés</h2>
+          <p>
+            Des solutions adaptées à vos besoins pour développer votre présence
+            en ligne.
+          </p>
         </header>
 
         <ul class="services-list">
-            <li>Création de sites vitrines professionnels</li>
-            <li>Conception de landing pages optimisées pour la conversion</li>
-            <li>Refonte et amélioration de sites existants</li>
+          <li>Création de sites vitrines professionnels</li>
+          <li>Conception de landing pages optimisées pour la conversion</li>
+          <li>Refonte et amélioration de sites existants</li>
         </ul>
-    </div>
-</section>
+      </div>
+    </section>
 
+    <!-- ================= CONTACT ================= -->
 
-<!-- ================= CTA ================= -->
-<section id="cta" class="cta">
-    <div class="container">
-        <h2>Prêt à concrétiser votre projet ?</h2>
-        <p>Discutons ensemble de vos objectifs et trouvons la meilleure solution pour votre activité.</p>
-        <a href="#contact" class="btn">Me contacter</a>
-    </div>
-</section>
+    <section id="contact">
+        
+      <div class="container">
+        <h2>Contact</h2>
+        <p>
+          Une question, un projet ou une collaboration ? N’hésitez pas à me
+          contacter.
+        </p>
 
+        <div class="contact-info">
 
-<!-- ================= CONTACT ================= -->
-<section id="contact">
-    <div class="container">
-        <header class="section-header">
-            <h2>Contact</h2>
-            <p>Une question, un projet ou une collaboration ? N’hésitez pas à me contacter.</p>
-        </header>
+        <a href=""
+          ><img src="icons/Gmail_Icon.png" class="gmail" alt="icone_gmail"
+        /></a>
+        <a href=""
+          ><img
+            src="icons/linkedin-logo-linkedin-icon-transparent-free-png.png"
+            alt="icone_linkedin"
+        /></a>
+        <a href=""
+          ><img
+            src="icons/vecteezy_github-black-logo-on-a-transparent-background_56850739.png"
+            alt="icone_github"
+        /></a>
+        <a href=""
+          ><img
+            src="icons/whatsapp-logo-icon-isolated-on-transparent-background-free-png.png"
+            alt="icone_whatsapp"
+        /></a>
+        <a href=""
+          ><img
+            src="icons/upwork-app-icon-on-transparent-background-free-png.png"
+            alt="icone_upwork"
+        /></a>
+        <div/>
+      </div>
+    </section>
 
-        <div class="contact-wrapper">
-
-            <form action="#" method="post">
-                <div class="form-group">
-                    <label for="name">Nom</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="email">Adresse email</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="message">Votre message</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
-                </div>
-
-                <button type="submit">Envoyer le message</button>
-            </form>
-
-            <aside class="contact-info">
-                <h3>Informations de contact</h3>
-                <a href=""><img src="icons/Gmail_Icon.png" class="gmail" alt="icone_gmail"></a>
-                <a href=""><img src="icons/linkedin-logo-linkedin-icon-transparent-free-png.png" alt="icone_linkedin"></a>
-                <a href=""><img src="icons/vecteezy_github-black-logo-on-a-transparent-background_56850739.png" alt="icone_github"></a>
-                <a href=""><img src="icons/whatsapp-logo-icon-isolated-on-transparent-background-free-png.png" alt="icone_whatsapp"></a>
-                <a href=""><img src="icons/upwork-app-icon-on-transparent-background-free-png.png" alt="icone_upwork"></a>
-            </aside>
-
-        </div>
-    </div>
-</section>
-
-
-<!-- ================= FOOTER ================= -->
-<footer>
-    <div class="container">
+    <!-- ================= FOOTER ================= -->
+    <footer>
+      <div class="container">
         <p>© 2026 Paul Afumba — Tous droits réservés</p>
-    </div>
-</footer>
+      </div>
+    </footer>
+  </body>
+</html>

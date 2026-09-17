@@ -3,6 +3,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
 /* General settings*/
 
 *{
@@ -38,6 +39,7 @@ body{
 
 .navbar{
   display: flex;
+  background: linear-gradient(to right, var(--secondary-color), var(--primary-color));
   align-items: center;
   justify-content: space-between;
   width: 100%;
@@ -47,14 +49,19 @@ body{
   top: 0;
   left: 0;
   z-index: 9999;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar.navbar-hidden{
+  transform: translateY(-100%);
 }
 
 .logo{
   width: 130px;
-  font-family: "Oswald", sans-serif;
+  font-family: "Black Ops One", cursive;
   font-optical-sizing: auto;
   font-size: 1.3rem;
-  font-weight: 1000;
+  font-weight: 200;
   color: var(--white)
 }
 
@@ -74,11 +81,19 @@ body{
 }
 
 .menu li{
-  padding: 0 16px;
+  padding: 16px 16px;
+  cursor: pointer;
+
+}
+
+.menu li:hover{
+  background-color: var(--secondary-color);
+  border-radius: 10px;
+  transition: all 0.3s ease;
 }
 
 .menu li a{
-  font-size: 0.7rem;
+  font-size: 1rem;
   padding: 8px;
   color: var(--white);
   text-transform: uppercase;
@@ -88,14 +103,14 @@ body{
 }
 
 .menu li a:hover{
- padding: 10px;
- font-size: 0.8rem;
- color: var(--primary-color);
+  color: var(--primary-color);
+  transition: all 0.3s ease;
 }
 
 .menu-hamburger{
   display: none;
   flex-direction: column;
+  align-items: center;
   cursor: pointer;
   z-index: 9999;
 }
@@ -108,6 +123,12 @@ body{
   transition: all 0.4s ease;
 }
 
+.menu-hamburger label{
+  color: var(--white);
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
 .menu-hamburger.active span:nth-child(1){
   transform: rotate(45deg) translate(10px, 5px);
 }
@@ -118,6 +139,10 @@ body{
 
 .menu-hamburger.active span:nth-child(3){
   transform: rotate(-45deg) translate(10px, -6px);
+}
+
+.menu-hamburger.active label{
+  display: none;
 }
 /* MY HERO */
 
@@ -140,7 +165,7 @@ body{
   height: 100%;
   border-radius: 100%;
   filter: blur(30px);
-  background: radial-gradient(circle, var(--primary-color)0%, transparent 66%);
+  background: radial-gradient( var(--primary-color)0%, transparent 66%);
   opacity: .3;
   z-index: 0;
 }
@@ -154,7 +179,7 @@ body{
   width: 100%; 
   border-radius: 100%;
   background-color: #0f0f0f;
-  background: radial-gradient(circle, var(--primary-color)0%, transparent 66%);
+  background: radial-gradient( var(--primary-color)0%, transparent 66%);
   opacity: 0.3;
 }
 
@@ -162,7 +187,6 @@ body{
   width: 50px;
   display: flex;
   flex-direction: column;
-  gap: 30px;
   color: var(--white);
   z-index: 1;
 }
@@ -170,7 +194,7 @@ body{
 .section_title .span{
   color: var(--primary-color);
   font-weight: 600;
-  font-size: 1.2rem;;
+  font-size: 1.2rem;
   letter-spacing: 1px;
 }
 
@@ -178,6 +202,11 @@ body{
   font-size: 3rem;
   font-weight: 600;
   letter-spacing: 3px;
+}
+
+.section_title .text{
+    font-family: "Black Ops One", cursive;
+    letter-spacing: 4px;
 }
 
 .section_title p{
@@ -230,7 +259,7 @@ body{
   border: 1px solid var(--primary-color);
   color: var(--white);
   text-align: center;
-  font-weight: 400;
+  font-weight: 600;
   cursor: pointer;
 }
 
@@ -248,9 +277,10 @@ body{
 
 /* ================= HEADINGS ================= */
 h2 {
+  border-radius: 20px;
     font-size: 2rem;
     margin-bottom: 10px;
-    color: var(--primary-color);
+    color: var(--white);
 }
 
 h3 {
@@ -263,16 +293,18 @@ h3 {
     margin-bottom: 40px;
 }
 
-.section-header p {
-    color: var(--white-light);
-}
-
 /* ================= ABOUT ================= */
 .apropos {
     padding: 60px 0;
     text-align: center;
+    background-color: var(--secondary-color);
 }
 
+.apropos h2 {
+    margin-bottom: 10px;
+    border: 1px solid var(--primary-color);
+    color: var(--white);
+}
 .apropos p{
   padding: 0 100px;
   text-align: center;
@@ -281,9 +313,13 @@ h3 {
 /* ================= SKILLS ================= */
 .skills {
     padding: 60px 0;
-    background: var(--secondary-color);
+    background: var(--primary-color);
 }
 
+.skills h2 {
+    border: 2px solid var(--white);
+    color: var(--white);
+}
 .skills-grid {
     display: flex;
     gap: 20px;
@@ -360,6 +396,7 @@ h3 {
 /* ================= SERVICES ================= */
 #services {
     padding: 60px 0;
+    background-color: var(--primary-color);
     text-align: center;
 }
 
@@ -371,75 +408,23 @@ h3 {
     margin: 10px 0;
 }
 
-/* ================= CTA ================= */
-.cta {
-    padding: 60px 0;
-    text-align: center;
-    background: var(--primary-color);
-    color: var(--white);
-}
-
-.cta h2{
-  color: var(--black);
-  font-weight: 900;
-}
-
-.btn {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 12px 25px;
-    background: var(--black);
-    color: var(--white);
-    text-decoration: none;
-    border-radius: 20px;
-    transition: 0.3s;
-}
-
-.btn:hover {
-    background: var(--white);
-    color: var(--black);
-}
-
 /* ================= CONTACT ================= */
 #contact {
     padding: 60px 0;
     background: var(--secondary-color);
 }
 
-.contact-wrapper {
-    display: flex;
-    gap: 30px;
-    flex-wrap: wrap;
-}
-
-form {
-    flex: 1;
-    min-width: 280px;
-}
-
-.form-group {
-    margin-bottom: 15px;
-}
-
-input, textarea {
-    width: 100%;
+.container h2 {
+    margin: 20px 100px;
     padding: 10px;
-    border: none;
-    border-radius: 5px;
-    margin-top: 5px;
+    text-align: center;
+    border: solid 1px var(--primary-color);
+  
 }
 
-button {
-    padding: 12px 20px;
-    background: var(--primary-color);
-    color: var(--white);
-    border: none;
-    cursor: pointer;
-    border-radius: 15px;
-}
-
-button:hover {
-    opacity: 0.8;
+.container p {
+    text-align: center;
+    margin-bottom: 40px;
 }
 
 .contact-info {
@@ -460,7 +445,7 @@ button:hover {
 footer {
     text-align: center;
     padding: 20px;
-    background: var(--black);
+    background: var(--black-light);
     color: var(--white-light);
 }
 
@@ -533,6 +518,10 @@ footer {
 
   .hero_text h3{
     font-size: 2rem;
+  }
+
+  .btn-hero{
+    backdrop-filter: blur(10px);
   }
 
   .btn{
